@@ -7,7 +7,7 @@ echo "We need to run as sudo to get access to the loginwindow hook, please enter
 #
 # Check for Hook
 #
-sudo defaults read com.apple.loginwindow LogoutHook
+sudo defaults read com.apple.loginwindow LogoutHook 2>1 /dev/null
 if [[ $? -eq 0 ]]; then
   echo "There is allready a logout hook installed please check manualy"
   exit -1
