@@ -1,6 +1,10 @@
 #!/bin/bash
 
 #
+# Ask for password hint
+#
+echo "We need to run as sudo to get access to the loginwindow hook, please enter your login password:"
+#
 # Check for Hook
 #
 sudo defaults read com.apple.loginwindow LogoutHook
