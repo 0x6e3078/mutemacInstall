@@ -10,3 +10,11 @@ To install the hook please run:
 sh -c "`curl -fsSL https://raw.githubusercontent.com/0x6e3078/mutemacInstall/master/installMuteMac.sh`"
 ```
 
+## Uninstall
+
+to uninstall run the following commmands
+
+```bash
+sudo defaults delete com.apple.loginwindow LogoutHook
+rm -rf ~/bin/mute-mac.sh
+```
