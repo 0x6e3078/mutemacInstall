@@ -12,9 +12,17 @@ sh -c "`curl -fsSL https://raw.githubusercontent.com/0x6e3078/mutemacInstall/mas
 
 ## Uninstall
 
-to uninstall run the following commmands
+to uninstall run the following commmand
+
+```bash
+sh -c "`curl -fsSL https://raw.githubusercontent.com/0x6e3078/mutemacInstall/master/installMuteMac.sh uninstall`"
+```
+
+or manualy the following commmands
 
 ```bash
 sudo defaults delete com.apple.loginwindow LogoutHook
+sudo defaults delete com.apple.loginwindow LoginHook
 rm -rf ~/bin/mute-mac.sh
+rm -rf ~/bin/unmute-mac.sh
 ```
