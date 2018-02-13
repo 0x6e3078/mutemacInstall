@@ -1,5 +1,15 @@
 #!/bin/bash
 
+if [[ $1 == "uninstall" ]]; then
+  echo "We need to run as sudo to uninstall the hook scripts, please enter your login password:"
+  sudo defaults delete com.apple.loginwindow LoginHook  2> /dev/null
+  sudo defaults delete com.apple.loginwindow LogoutHook 2> /dev/null
+  rm -rf ~/bin/mute-mac.sh
+  rm -rf ~/bin/unmute-mac.sh
+  echo "Uninstall finished"
+  exit 0
+fi
+
 #
 # Ask for password hint
 #
