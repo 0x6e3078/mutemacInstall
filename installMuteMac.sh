@@ -27,6 +27,7 @@ cat <<EOF > ~/bin/mute-mac.sh
 #!/bin/bash
 osascript -e 'set volume with output muted'
 EOF
+chmod u+x ~/bin/mute-mac.sh
 
 sudo defaults write com.apple.loginwindow LogoutHook ~/bin/mute-mac.sh
 if [[ $? -eq 0 ]]; then
